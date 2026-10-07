@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixel Depot — Clear the picture. Keep the robots flowing.</title>
+<meta name="description" content="A one-tap pixel-block clearing puzzle. Tap a crate and a line of little robots hauls every block of its colour off a pixel-art picture. 281 levels, no timers, no lives, fully offline.">
+<meta property="og:title" content="Pixel Depot">
+<meta property="og:description" content="Clear the picture. Keep the robots flowing.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/og.jpg">
+<link rel="icon" type="image/png" href="img/icon-256.png">
+<style>
+:root{--paper:#EDD8AC;--paper-light:#F7E9C9;--paper-dark:#D9C08C;--teal:#2E93A5;--teal-dark:#1E6B7A;--accent:#FA8B00;--ink:#0D2B2B;--muted:#8A7350;--chamfer:polygon(8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px),0 8px)}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+.wrap{max-width:760px;margin:0 auto;padding:36px 20px 64px}
+nav{margin-bottom:26px}
+nav a{margin-right:18px;font-weight:700;text-decoration:none;color:var(--ink)}
+nav a:hover{color:var(--teal-dark)}
+.hero{display:flex;gap:20px;align-items:center;margin-bottom:8px}
+.hero img{width:96px;height:96px;image-rendering:pixelated;border:3px solid var(--ink);clip-path:var(--chamfer);background:var(--paper-light);flex:0 0 auto}
+h1{font-size:34px;line-height:1.15;margin:0;font-weight:800;letter-spacing:.2px}
+.tag{font-size:18px;color:var(--muted);margin:14px 0 20px}
+.badge{display:inline-block;background:var(--accent);color:var(--ink);border:2px solid var(--ink);clip-path:var(--chamfer);padding:8px 18px;font-weight:800;font-size:14px;box-shadow:inset 0 3px 0 rgba(255,255,255,.4),inset 0 -3px 0 rgba(0,0,0,.22)}
+h2{font-size:20px;margin:34px 0 10px;font-weight:800}
+p,li{margin:8px 0}
+.panel{background:var(--paper-light);border:2px solid var(--ink);clip-path:var(--chamfer);box-shadow:inset 0 3px 0 rgba(255,255,255,.45),inset 0 -3px 0 rgba(0,0,0,.14);padding:18px 22px;margin:14px 0}
+.hook{font-size:17px;font-weight:700}
+.wall{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:18px 0 6px}
+.wall img{width:100%;height:auto;image-rendering:pixelated;border:2px solid var(--ink);clip-path:polygon(5px 0,calc(100% - 5px) 0,100% 5px,100% calc(100% - 5px),calc(100% - 5px) 100%,5px 100%,0 calc(100% - 5px),0 5px);background:var(--paper-light);display:block}
+.caption{color:var(--muted);font-size:13px;margin:6px 0 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid .panel{margin:0}
+.grid h3{margin:0 0 6px;font-size:16px}
+.grid p{margin:0;font-size:14px;color:var(--muted)}
+.stripes{height:10px;margin:30px 0 0;background:repeating-linear-gradient(-45deg,var(--accent) 0 6px,var(--ink) 6px 9px);clip-path:var(--chamfer)}
+footer{margin-top:36px;color:var(--muted);font-size:13px}
+footer a{color:var(--muted)}
+@media (max-width:560px){.wall{grid-template-columns:repeat(4,1fr)}.grid{grid-template-columns:1fr}h1{font-size:27px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="support/">Support</a></nav>
+
+  <div class="hero">
+    <img src="img/icon-256.png" alt="Pixel Depot app icon: a pixel-art robot head">
+    <h1>Clear the picture.<br>Keep the robots flowing.</h1>
+  </div>
+  <p class="tag">A one-tap pixel-block clearing puzzle. No timers, no lives &mdash;
+  just the satisfying click of the last block gone.</p>
+  <span class="badge">Coming soon to the App Store</span>
+
+  <h2>One tap. A whole factory answers.</h2>
+  <p>Every level starts as a complete pixel-art picture. Tap a coloured crate and
+  a stream of little robots marches onto the board, picks up blocks of its own
+  colour and carries them back to the depot. Clear the whole board and
+  the artwork joins your collection.</p>
+
+  <h2>The only decision is order.</h2>
+  <p>A crate can only send robots out while blocks of its colour are still
+  reachable &mdash; bury a colour under the rest of the picture and the crate
+  holding it sits in its slot with nothing to do. Fill every slot with crates
+  that cannot work and the factory jams. Read the picture, count what is left,
+  choose your crates in the right order.</p>
+
+  <div class="panel hook">One tap. A whole factory answers.</div>
+  <div class="panel hook">Every level is a picture waiting to be uncovered.</div>
+  <div class="panel hook">No timers, no lives &mdash; just the satisfying click of the last block gone.</div>
+
+  <h2>Every level is a picture.</h2>
+  <div class="wall" aria-label="A selection of the pixel artworks in the game">
+    <img src="img/art_01.png" alt="Pixel artwork: panda">
+    <img src="img/art_02.png" alt="Pixel artwork: fox">
+    <img src="img/art_03.png" alt="Pixel artwork: frog">
+    <img src="img/art_04.png" alt="Pixel artwork: whale">
+    <img src="img/art_05.png" alt="Pixel artwork: owl">
+    <img src="img/art_06.png" alt="Pixel artwork: lion">
+    <img src="img/art_07.png" alt="Pixel artwork: butterfly">
+    <img src="img/art_08.png" alt="Pixel artwork: crab">
+    <img src="img/art_09.png" alt="Pixel artwork: sushi">
+    <img src="img/art_10.png" alt="Pixel artwork: pizza">
+    <img src="img/art_11.png" alt="Pixel artwork: rainbow">
+    <img src="img/art_12.png" alt="Pixel artwork: heart balloon">
+  </div>
+  <p class="caption">A few of the 281 artworks already in the game, across nine
+  themes: animals, food, nature, vehicles, sea, space, toys, landmarks and sports.</p>
+
+  <h2>What is in the box</h2>
+  <div class="grid">
+    <div class="panel"><h3>281 levels, 35 chapters</h3><p>A chapter map that always shows how far you are and what comes next. New levels can arrive without an App Store update.</p></div>
+    <div class="panel"><h3>An album that keeps growing</h3><p>Fill a themed page of artworks and claim a reward &mdash; every fifth page a permanent upgrade.</p></div>
+    <div class="panel"><h3>Daily artwork</h3><p>One level a day pays triple coins and fills its own shelf in the album. Missing a day costs nothing but that day's coins.</p></div>
+    <div class="panel"><h3>Seven-day rewards</h3><p>A login ladder that climbs day by day, then starts over. Missing a day resets nothing.</p></div>
+    <div class="panel"><h3>Rope-linked crates</h3><p>A tied pair ships together, takes two slots, and leaves only when both are empty.</p></div>
+    <div class="panel"><h3>Coins with a purpose</h3><p>Permanent Depot upgrades and robot skins to spend them on, so every level you clear sticks with you.</p></div>
+  </div>
+
+  <h2>Fair by design</h2>
+  <div class="panel">
+    <p>Every shipped level is proven solvable by an exhaustive solver, then
+    screened by a blind-play jam probe. A jam always means the order was wrong,
+    never that the board was impossible. Two optional boosters &mdash; Extra Slot
+    and Reveal &mdash; are bought with coins before a shift starts and never edit
+    the level. The first three levels teach you with a pointing hand and a
+    pulsing ring, without a word of text.</p>
+  </div>
+
+  <h2>Private and offline</h2>
+  <div class="panel">
+    <p>Pixel Depot collects nothing. No account, no analytics, no advertising
+    SDK. The App Store privacy label reads <em>Data Not Collected</em> across
+    every category, and the whole game plays offline. Free to download and free
+    to play all the way through; optional coin packs are never required to
+    finish any level.</p>
+  </div>
+
+  <div class="stripes" aria-hidden="true"></div>
+  <footer>
+    <p>Pixel Depot &mdash; a one-tap pixel-block clearing puzzle.<br>
+    <a href="privacy/">Privacy Policy</a> &middot;
+    <a href="terms/">Terms of Use</a> &middot;
+    <a href="support/">Support</a> &middot;
+    <a href="mailto:wanggyxfmail@gmail.com">wanggyxfmail@gmail.com</a></p>
+  </footer>
+</div>
+</body>
+</html>
